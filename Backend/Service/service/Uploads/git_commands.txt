@@ -1,0 +1,65 @@
+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
+
+# GIT
+1. git lfs install
+2. git init
+2. git config core.autocrlf true
+3. git lfs track "*.h5"
+4. git add .gitattributes
+5. git add .
+6. git commit -m "initial commit"
+7. git remote add origin git@github.com:Puspha22/Braintumordetection.git
+8. git branch -M main
+9. git push -u origin main
+
+# ADD SSH
+1. github setting create SSH
+2. in git bash ssh-keygen -t ed25519 -C "your_email@example.com"
+3. cat *****.pub
+4. copy and paste in github
+
+# CREATE BRANCH GIT
+cd Documents
+cd clone http://repo
+cd reponame
+git init
+git branch branchname
+git branch
+git checkout branchname
+git add .
+git commit -m "Message"
+git branch -M branchname
+git push -u origin branchname
+
+
+# VIRTUAL ENV
+https://www.youtube.com/watch?v=g5jxJE0LJYA
+pip install virtualenv
+virtualenv mypython
+source mypython/bin/activate
+deactivate
+
+
+# INSTALL RAPIDMINER
+sudo chmod +x RapidMiner-studio.sh
+./RapidMiner-studio.sh
+
+
+# RUN TOMCAT
+sudo /opt/tomcat/apache-tomcat-8.5.73/bin/startup.sh
+
+# DOCKER
+docker rmi $(docker images -q)
+docker rm ec 1b 
+docker ps -a
+docker ps
+docker stop -f $(docker ps -aq)
+docker images 
+docker pull python:3.9.9-slim-buster
+docker pull node:lts-node
+docker-compose --help 
+ls -lah
+docker-compose -f docker-compose.yml  up manage
+
+# Display 75Hz
+xrandr --output HDMI-1 --mode 1280x1024 --rate 75
