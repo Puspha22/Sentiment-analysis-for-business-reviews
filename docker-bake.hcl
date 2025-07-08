@@ -18,4 +18,3 @@ target "service" {
   context = "./Backend/Service"
   dockerfile = "Dockerfile"
   tags = ["sentiment-service:latest"]
-} 
