@@ -1,0 +1,29 @@
+services:
+  # New Frontend Service
+  frontend:
+    build: ./Frontend
+    ports:
+      - "3000:80"
+
+  user:
+    build: ./Backend/User
+    ports:
+      - "4001:5000"
+    env_file:
+      - ./Backend/User/.env
+    depends_on:
+      - frontend
+
+  service:
+    build: ./Backend/Service
+    ports:
+      - "4002:5000"
+    depends_on:
+      - user
+    env_file:
+      - ./Backend/Service/.env
+    volumes:
+      - model_cache:/app/.cache/huggingface
+
+volumes:
+  model_cache:

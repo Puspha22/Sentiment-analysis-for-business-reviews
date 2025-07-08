@@ -1,0 +1,35 @@
+services:
+  frontend:
+    volumes:
+      - ./Frontend:/app
+      - /app/node_modules
+    command: ["npm", "start"]
+    ports:
+      - "3000:3000"
+
+  user:
+    volumes:
+      - ./Backend/User:/user
+    environment:
+      - DEBUG=True
+    command: ["python", "-u", "user.py"]
+    ports:
+      - "4001:5000"
+    env_file:
+      - ./Backend/User/.env
+    depends_on:
+      - frontend
+
+  service:
+    volumes:
+      - ./Backend/Service:/service
+      - model_cache:/app/.cache/huggingface
+    environment:
+      - DEBUG=True
+    command: ["python", "service.py"]
+    ports:
+      - "4002:5000"
+    env_file:
+      - ./Backend/Service/.env
+    depends_on:
+      - user 

@@ -1,0 +1,14 @@
+node_modules
+.git
+*.log
+__pycache__
+*.pyc
+*.pyo
+.DS_Store
+.env
+.env.*
+Frontend/build
+Frontend/.next
+Frontend/.cache
+Backend/User/__pycache__
+Backend/Service/__pycache__ 

@@ -1,0 +1,70 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac/Windows
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Build
+build/
+dist/
+Frontend/build/
+Frontend/.next/
+Frontend/.cache/
+Backend/User/__pycache__/
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# Frontend test artifacts
+public/test
+src/**/*.test.js
+src/**/*.spec.js
+
+# --- Sentiment Analysis Service: Ignore model files and folders ---
+Backend/Service/service/cardiffnlp/
+Backend/Service/service/saved_model/
+*.bin
+*.h5
+*.pkl
+*.joblib
+*.pt
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+*.npz
+*.npy
+*.model
+*.weights
+*.tar.gz
+*.zip
+*.tar
+*.pth
+*.index
+*.data*
